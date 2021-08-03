@@ -1,4 +1,4 @@
-# navigation-menu
+# Group2
 
 ## Project setup
 ```
