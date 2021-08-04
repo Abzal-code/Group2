@@ -1,14 +1,18 @@
 <template>
-    <navigation class="nav"/>
-    <router-view v-slot="{ Component }">
-      <transition
-      enter-active-class="animate__animated animate__fadeInRight"
-      leave-active-class="animate__animated animate__fadeOutLeft"
-      mode="out-in">
+  <div class="wrapper">
+      <navigation class="nav"/>
+    <div class="main">
+      <router-view v-slot="{ Component }" >
+        <transition
+        enter-active-class="animate__animated animate__fadeInRight"
+        leave-active-class="animate__animated animate__fadeOutLeft"
+        mode="out-in">
         <component :is="Component"/>
-      </transition>
-    </router-view>
-    <Footer/>
+        </transition>
+      </router-view>
+    </div>
+    <Footer class="footer"/>
+  </div>
 </template>
 
 <script>
@@ -42,6 +46,31 @@ export default {
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+
+  html, body {
+    height: 100%;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      .main {
+        // height: 100%;
+        // position: relative;
+        flex: 1 0 auto;
+      }
+
+      .footer {
+        display: flex;
+        // margin-top: auto;
+        flex: 0 0 auto;
+        @media(max-width: 1140px) {
+          // position: absolute;
+          // bottom: 0;
+        }
+      }
+    }
+  }
 
   .fade-enter-from,
   .fade-enter-to {

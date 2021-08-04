@@ -7,9 +7,6 @@
         </a>
       </Blockimage>
       <div class="partners__wrapper">
-        <div class="partners__text">
-          <!-- <h1>Наши Партнеры</h1> -->
-        </div>
         <div class="partners__img">
           <img src="@/assets/oppo.png" alt="oppo">
           <img src="@/assets/uchteh.png" alt="учтех">
@@ -21,7 +18,7 @@
           <img src="@/assets/boch.png" alt="bosch">
           <img src="@/assets/acer.png" alt="acer">
           <img src="@/assets/forward.png" alt="forward">
-          <img src="@/assets/wallix.png" alt="wallix">
+          <!-- <img src="@/assets/wallix.png" alt="wallix"> -->
           <img src="@/assets/dell.png" alt="dell">
           <img src="@/assets/lenovo.png" alt="lenovo">
           <img src="@/assets/proma.png" alt="proma">
@@ -57,8 +54,8 @@ body {
       .btn-shine {
         position: absolute;
         transform: translate(-50%,-50%);
+        background: linear-gradient(to right, #008DFC 0, #008DFC 10%, #7300ED 20%);
         padding: 12px 48px;
-        background: linear-gradient(to right, #FEEA10 0, #FCCE0E 10%, #008D1C 20%);
         color: #ffffff;
         background-position: 0;
         -webkit-background-clip: text;
@@ -91,15 +88,35 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin: 45px;
+        @media (max-width: 1140px) {
+          flex-direction: column;
+        }
         .partners__text {
           display: flex;
         }
         .partners__img {
           display: flex;
-          align-items: center;
+          flex-wrap: wrap;
+          justify-content: center;
+          height: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          @media (max-width: 1140px) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+          }
           img {
             display: flex;
-            margin: 8px;
+            margin: 50px;
+            @media (max-width: 1140px) {
+              width: 20%;
+              height: 20%;
+              margin: 25px;
+            }
           }
         }
       }

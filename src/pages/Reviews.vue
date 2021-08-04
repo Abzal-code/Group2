@@ -35,8 +35,8 @@ body {
       .btn-shine {
         position: absolute;
         transform: translate(-50%,-50%);
+        background: linear-gradient(to right, #008DFC 0, #008DFC 10%, #7300ED 20%);
         padding: 12px 48px;
-        background: linear-gradient(to right, #FEEA10 0, #FCCE0E 10%, #008D1C 20%);
         color: #ffffff;
         background-position: 0;
         -webkit-background-clip: text;

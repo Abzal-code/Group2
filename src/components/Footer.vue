@@ -18,6 +18,7 @@
   .footer {
       width: 100%;
       background-image: linear-gradient(#7300ED, #008DFC);
+      // opacity: 50%;
     .footer__wrapper {
       margin-left: 150px;
       padding: 15px;
