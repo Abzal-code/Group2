@@ -11,22 +11,20 @@
         </transition>
       </router-view>
     </div>
-    <Footer class="footer"/>
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue';
-import Footer from './components/Footer.vue';
+// import Footer from './components/Footer.vue';
 export default {
   name: 'App',
   components: {
     Navigation,
-    Footer,
+    // Footer,
   },
   data() {
     return {
-      //  transitionName: 'slide-left'
     }
   },
   // watch: {

@@ -1,11 +1,14 @@
 <template>
   <div class="contacts">
       <div class="contacts__container">
-        <Blockimage>
-          <a href="#" class="btn-shine" target="_blank">
-            Контакты
-          </a>
-        </Blockimage>
+        <div class="wrapper__img" data-v-3cc713de="">
+          <img src="@/assets/it.jpeg" alt="img" data-v-3cc713de="">
+            <span class="text" data-v-3cc713de="">
+              <a href="#" class="btn-shine" target="_blank">
+                Контакты
+              </a>
+            </span>
+        </div>
       </div>
       <div class="contacts__wrapper">
         <div class="map">
@@ -20,13 +23,14 @@
           </p>
         </div>
       </div>
+    <Footer class="footer"/>
   </div>
 </template>
 
 <script>
+import Footer from '@/components/Footer'
 import DG from "2gis-maps";
 // @ is an alias to /src
-import Blockimage from '@/components/Blockimage'
 export default {
   data() {
     return {
@@ -35,7 +39,7 @@ export default {
   },
   name: "Contacts",
   components: {
-    Blockimage,
+    Footer,
   },
   mounted() {
     var map;
@@ -53,16 +57,46 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-    background: black
-  font-family 'Poppins', sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-}
+
   .contacts {
 
     .contacts__container {
 
+      .wrapper__img {
+      display: flex;
+      position: relative;
+      width: 100%;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0.5;
+      }
+      span {
+        display: flex;
+        position: absolute;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 27px;
+        background: rgba(0, 0, 0, 0.5);
+        // color: #fafafa;
+        line-height: 35px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 5px;
+        @media(max-width: 1140px) {
+          font-family: Raleway;
+          font-size: 15px;
+          line-height: 15px;
+          margin-top: 35px;
+        }
+      }
+  }
       .btn-shine {
         position: absolute;
         transform: translate(-50%,-50%);
@@ -79,6 +113,9 @@ body {
         font-size: 46px;
         text-decoration: none;
         white-space: nowrap;
+        @media (max-width: 1140px) {
+          font-size: 35px;
+        }
 
         @keyframes shine {
           0% {
@@ -116,6 +153,15 @@ body {
         line-height: 1.5;
       }
     }
+        .footer {
+        display: flex;
+        // margin-top: auto;
+        flex: 0 0 auto;
+        @media(max-width: 1140px) {
+          position: absolute;
+          bottom: 0;
+        }
+      }
   }
 
 </style>

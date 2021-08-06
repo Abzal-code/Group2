@@ -1,11 +1,14 @@
 <template>
   <div class="home">
     <div class="home__container">
-      <Blockimage>
-        <a href="#" class="btn-shine" target="_blank">
-          о нас
-        </a>
-      </Blockimage>
+      <div class="wrapper__img" data-v-3cc713de="">
+        <img src="@/assets/onas.jpg" alt="img" data-v-3cc713de="">
+          <span class="text" data-v-3cc713de="">
+            <a href="#" class="btn-shine" target="_blank">
+              о нас
+            </a>
+          </span>
+      </div>
       <div class="home__text">
         <div class="text__wrapper">
           <div class="about__us">
@@ -23,36 +26,74 @@
         </div>
       </div>
     </div>
+    <Footer class="footer"/>
   </div>
 </template>
 
 <script>
-import Blockimage from '@/components/Blockimage'
+import Footer from '@/components/Footer';
 export default {
   name: "Home",
   components: {
-    Blockimage,
+    Footer,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-   .home {
-     display: flex;
-     margin: 0 auto;
-     width: 100%;
+    .home {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
 
-     .home__container {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
+      .home__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-       .home__text {
-         display: flex;
-         flex-direction: column;
-         position: relative;
-         top: -140px;
-         margin: 0 auto;
+      .wrapper__img {
+      display: flex;
+      position: relative;
+      width: 100%;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0.5;
+      }
+      span {
+        display: flex;
+        position: absolute;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 27px;
+        background: rgba(0, 0, 0, 0.5);
+        // color: #fafafa;
+        line-height: 35px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 5px;
+        @media(max-width: 1140px) {
+          font-family: Raleway;
+          font-size: 15px;
+          line-height: 15px;
+          margin-top: 35px;
+        }
+      }
+  }
+
+        .home__text {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -140px;
+        margin: 0 auto;
           @media (max-width: 1140px) {
             top: 0;
           }
@@ -89,6 +130,9 @@ export default {
         font-size: 46px;
         text-decoration: none;
         white-space: nowrap;
+        @media (max-width: 1140px) {
+          font-size: 35px;
+        }
 
         @keyframes shine {
           0% {
@@ -106,6 +150,12 @@ export default {
         }
       }
      }
-   }
+      .footer {
+        @media (max-width: 1140px) {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+  }
 
 </style>
