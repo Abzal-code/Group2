@@ -1,22 +1,26 @@
 <template>
   <div class="reviews">
     <div class="reviews__container">
-      <Blockimage>
-        <a href="#" class="btn-shine" target="_blank">
-          отзывы
-        </a>
-      </Blockimage>
+      <div class="wrapper__img" data-v-3cc713de="">
+        <img src="@/assets/otzyvy.jpg" alt="img" data-v-3cc713de="">
+          <span class="text" data-v-3cc713de="">
+            <a href="#" class="btn-shine" target="_blank">
+              Отзывы
+            </a>
+          </span>
+      </div>
     </div>
+    <Footer class="footer"/>
   </div>
 </template>
 
 <script>
+import Footer from '@/components/Footer'
 // @ is an alias to /src
-import Blockimage from '@/components/Blockimage'
 export default {
   name: "Reviews",
   components: {
-    Blockimage,
+    Footer,
   },
 };
 </script>
@@ -32,11 +36,47 @@ body {
 
     .reviews__container {
 
+         .wrapper__img {
+      display: flex;
+      position: relative;
+      width: 100%;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0.5;
+      }
+      span {
+        display: flex;
+        position: absolute;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 27px;
+        background: rgba(0, 0, 0, 0.5);
+        // color: #fafafa;
+        line-height: 35px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 5px;
+        @media(max-width: 1140px) {
+          font-family: Raleway;
+          font-size: 15px;
+          line-height: 15px;
+          margin-top: 35px;
+        }
+      }
+  }
+
       .btn-shine {
         position: absolute;
         transform: translate(-50%,-50%);
+        background: linear-gradient(to right, #008DFC 0, #008DFC 10%, #7300ED 20%);
         padding: 12px 48px;
-        background: linear-gradient(to right, #FEEA10 0, #FCCE0E 10%, #008D1C 20%);
         color: #ffffff;
         background-position: 0;
         -webkit-background-clip: text;
@@ -48,6 +88,9 @@ body {
         font-size: 46px;
         text-decoration: none;
         white-space: nowrap;
+        @media (max-width: 1140px) {
+          font-size: 35px;
+        }
 
         @keyframes shine {
           0% {
@@ -65,7 +108,12 @@ body {
         }
       }
     }
+        .footer {
+        @media (max-width: 1140px) {
+          position: absolute;
+          bottom: 0;
+        }
+      }
   }
-
 
 </style>

@@ -1,44 +1,45 @@
 <template>
   <div class="partners">
     <div class="partners__container">
-      <Blockimage>
-        <a href="#" class="btn-shine" target="_blank">
-          Партнеры
-        </a>
-      </Blockimage>
+      <div class="wrapper__img" data-v-3cc713de="">
+        <img src="@/assets/partnery.jpg" alt="img" data-v-3cc713de="">
+          <span class="text" data-v-3cc713de="">
+            <a href="#" class="btn-shine" target="_blank">
+              партнеры
+            </a>
+          </span>
+      </div>
       <div class="partners__wrapper">
-        <div class="partners__text">
-          <!-- <h1>Наши Партнеры</h1> -->
-        </div>
         <div class="partners__img">
           <img src="@/assets/oppo.png" alt="oppo">
           <img src="@/assets/uchteh.png" alt="учтех">
           <img src="@/assets/imakr.png" alt="imakr">
-          <img src="@/assets/vertiv.png" alt="vertiv">
+          <img src="@/assets/dell.png" alt="dell">
           <img src="@/assets/citrix.png" alt="citrix">
           <img src="@/assets/kh.png" alt="khproductions">
           <img src="@/assets/vce.png" alt="vce">
           <img src="@/assets/boch.png" alt="bosch">
           <img src="@/assets/acer.png" alt="acer">
           <img src="@/assets/forward.png" alt="forward">
-          <img src="@/assets/wallix.png" alt="wallix">
-          <img src="@/assets/dell.png" alt="dell">
+          <!-- <img src="@/assets/wallix.png" alt="wallix"> -->
+          <img src="@/assets/vertiv.png" alt="vertiv">
           <img src="@/assets/lenovo.png" alt="lenovo">
           <img src="@/assets/proma.png" alt="proma">
           <img src="@/assets/d-link.png" alt="d-link">
         </div>
       </div>
     </div>
+    <Footer class="footer"/>
   </div>
 </template>
 
 <script>
+import Footer from '@/components/Footer'
 // @ is an alias to /src
-import Blockimage from '@/components/Blockimage'
 export default {
   name: "Partners",
   components: {
-    Blockimage,
+    Footer,
   },
 };
 </script>
@@ -53,12 +54,47 @@ body {
   .partners {
 
     .partners__container {
+      .wrapper__img {
+      display: flex;
+      position: relative;
+      width: 100%;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0.5;
+      }
+      span {
+        display: flex;
+        position: absolute;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 27px;
+        background: rgba(0, 0, 0, 0.5);
+        // color: #fafafa;
+        line-height: 35px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 5px;
+        @media(max-width: 1140px) {
+          font-family: Raleway;
+          font-size: 15px;
+          line-height: 15px;
+          margin-top: 35px;
+        }
+      }
+  }
 
       .btn-shine {
         position: absolute;
         transform: translate(-50%,-50%);
+        background: linear-gradient(to right, #008DFC 0, #008DFC 10%, #7300ED 20%);
         padding: 12px 48px;
-        background: linear-gradient(to right, #FEEA10 0, #FCCE0E 10%, #008D1C 20%);
         color: #ffffff;
         background-position: 0;
         -webkit-background-clip: text;
@@ -70,6 +106,9 @@ body {
         font-size: 46px;
         text-decoration: none;
         white-space: nowrap;
+        @media (max-width: 1140px) {
+          font-size: 35px;
+        }
 
         @keyframes shine {
           0% {
@@ -91,20 +130,41 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin: 45px;
+        @media (max-width: 1140px) {
+          flex-direction: column;
+        }
         .partners__text {
           display: flex;
         }
         .partners__img {
           display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           align-items: center;
+          height: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          @media (max-width: 1140px) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+          }
           img {
             display: flex;
-            margin: 8px;
+            margin: 45px;
+            // width: 70px;
+            @media (max-width: 1140px) {
+              margin: 25px;
+            }
           }
         }
       }
     }
   }
+
 
 
 </style>

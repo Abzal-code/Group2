@@ -9,7 +9,6 @@
           <li><router-link class="link" to="/">О нас</router-link></li>
           <li><router-link class="link" to="/portfolio">Портфолио</router-link></li>
           <li><router-link class="link" to="/reviews">Отзывы</router-link></li>
-          <li><router-link class="link" to="/catalog">Каталог</router-link></li>
           <li><router-link class="link" to="/partners">Партнёры</router-link></li>
           <li><router-link class="link" to="/contacts">Контакты</router-link></li>
         </ul>
@@ -21,7 +20,6 @@
             <li><router-link class="link" to="/">О нас</router-link></li>
             <li><router-link class="link" to="/portfolio">Портфолио</router-link></li>
             <li><router-link class="link" to="/reviews">Отзывы</router-link></li>
-            <li><router-link class="link" to="/catalog">Каталог</router-link></li>
             <li><router-link class="link" to="/partners">Партнёры</router-link></li>
             <li><router-link class="link" to="/contacts">Контакты</router-link></li>
           </ul>
