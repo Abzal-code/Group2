@@ -28,6 +28,14 @@
           <img src="@/assets/d-link.png" alt="d-link">
         </div>
       </div>
+      <div class="img_link">
+        <div class="link_wrapper">
+          <a href="https://www.coreldraw.com/en/product/coreldraw/2021.html?x-vehicle=ppc_brkws&gclid=Cj0KCQjwvO2IBhCzARIsALw3ASo_q0ud8gTRaldwMgBke22cJ1DKTMzYVSEYkYgt2yPaErckzCIB5JIaAkQ-EALw_wcB">
+            <img src="@/assets/first.png" alt="">
+            <img src="@/assets/second.jpeg" alt="">
+          </a>
+        </div>
+      </div>
     </div>
     <Footer class="footer"/>
   </div>
@@ -158,6 +166,22 @@ body {
             // width: 70px;
             @media (max-width: 1140px) {
               margin: 25px;
+            }
+          }
+        }
+      }
+      .img_link {
+        width: 100%;
+        .link_wrapper {
+          width: 100%;
+          display: flex;
+          a {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            img {
+              display: flex;
+              width: 100%;
             }
           }
         }
